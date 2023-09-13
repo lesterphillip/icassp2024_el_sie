@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Electrolaryngeal Speech Intelligibility Enhancement Through Robust Linguistic Encoders</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+      }
+      header {
+        text-align: center;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: #4B3F72;
+        color: white;
+        margin-bottom: 40px;
+      }
+      table {
+        margin: auto;
+        width: 80%;
+      }
+      th, td {
+        padding: 10px;
+        text-align: left;
+        width: 20%;
+      }
+      th {
+        background-color: #4B3F72;
+        color: white;
+      }
+      div {
+          width: 80%;
+          padding: 10px;
+          margin: auto;
+        }
+      tbody tr:hover {
+        background-color: #eee;
+      }
+      .main-description {
+        padding: 20px;
+        background-color: #f9f9f9;
+        font-size: 18px;
+      }
+      .table-description {
+        padding: 20px;
+        background-color: #4B3F72;
+        color: white;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+        <header>
+          <h2>Electrolaryngeal Speech Intelligibility Enhancement Through Robust Linguistic Encoders</h2>
+        </header>
+      </article>
+
+      <div style="width: 80%" | align="justify">
+        <h2><u>Official Audio Samples</u></h2>
+        <b>Authors:</b> Lester Phillip Violeta<sup>1</sup>, Wen-Chin Huang<sup>1</sup>, Ding Ma<sup>1</sup>, Ryuichi Yamamoto<sup>1</sup>, Kazuhiro Kobayashi<sup>1,2</sup>, Tomoki Toda<sup>1</sup>
+        <br>
+        <b>1: Nagoya University, Japan</b>
+        <br>
+        <b>2: TARVO Inc., Japan</b>
+        <br>
+        <br>
+        <b>Transcriptions:</b>
+        <br>
+        <b>Utterance 1: 上司のおごりで、しゃぶしゃぶの食べ放題に行った。/ jyoushi no ogori de, shabushabu no tabehoudai ni itta.</b>
+        <br>
+        <b>Utterance 2: 新幹線で23時に名古屋に着きます。/ shinkansen de ni jyuu san ji ni nagoya ni tsukimasu.</b>
+        <br>
+        <b>Utterance 3: 映画館でポップコーンを食べる。/ eigakan de poppukoon wo taberu.</b>
+        <br>
+        <b>Utterance 4: おととい届いたウォーターサーバーが故障した。/ ototoi todoita woota saaba ga koshou shita.</b>
+        <br>
+        <a href="https://arxiv.org/abs/2105.13871"> [ArXiv paper]</a> &emsp; <a href="https://lesterphillip.github.io/icassp24_el/"> [Official demo]</a>
+        </div>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>System and Description</th>
+            <th>Utterance 1</th>
+            <th>Utterance 2</th>
+            <th>Utterance 3</th>
+            <th>Utterance 4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Source EL</td>
+            <td><audio controls><source src="source/csa547.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="source/csa548.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="source/csa549.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="source/csa550.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td>Target GT</td>
+            <td><audio controls><source src="GT-TD/csa547.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="GT-TD/csa548.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="GT-TD/csa549.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="GT-TD/csa550.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td>(1) Baseline, mel/mel, TTS/AE</td>
+            <td><audio controls><source src="B-TTS/csa547.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="B-TTS/csa548.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="B-TTS/csa549.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="B-TTS/csa550.wav" type="audio/wav"></audio></td>
+          </tr>
+        <tr>
+            <td>(2) Baseline, mel/mel, Parallel VC</td>
+            <td><audio controls><source src="B-PVC/csa547.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="B-PVC/csa548.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="B-PVC/csa549.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="B-PVC/csa550.wav" type="audio/wav"></audio></td>
+          </tr>
+        <tr>
+          <td>(3) Proposed, PPG/HuBERT, TTS/AE</td>
+            <td><audio controls><source src="PH-TTS/csa547.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="PH-TTS/csa548.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="PH-TTS/csa549.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="PH-TTS/csa550.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>(4) Proposed, PPG/HuBERT, Parallel VC</td>
+            <td><audio controls><source src="PH-PVC/csa547.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="PH-PVC/csa548.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="PH-PVC/csa549.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="PH-PVC/csa550.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+          <td>(5) Ablation, PPG/mel, Parallel VC</td>
+            <td><audio controls><source src="PM-PVC/csa547.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="PM-PVC/csa548.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="PM-PVC/csa549.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="PM-PVC/csa550.wav" type="audio/wav"></audio></td>
+        </tr>
+        </tbody>
+      </table>
+
+  </body>
+</html>
